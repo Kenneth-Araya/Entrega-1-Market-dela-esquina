@@ -10,7 +10,7 @@ formulario.addEventListener("submit", function(evento) {
     const correo = campoCorreo.value.trim();
 
     if (nombre && correo) {
-        window.location.href = "Home.html"; // cambia por el nombre real de tu página
+        window.location.href = "Home.html";
     } else {
         mensajeResultado.textContent = "Por favor completa ambos campos.";
         mensajeResultado.classList.add("text-danger");
