@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/estilosHome.css">
+
+    <script src="js/appHome.js" defer></script>
+</head>
+    <main>
+        <!--Formulario de iniciar sesion-->
+        <section id="reservas" class="bg-light py-5" >
+            <div class="container" >
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6" >
+                        <h2 class="text-center mb-4">
+                            Login 
+                        </h2>
+
+                        <form action="" method=""
+                            id="formulario-reserva"
+                            class="border rounded p-4 shadow bg-white"
+                        >
+                        <div class="mb-3" >
+                            <label for="nombre" class="form-label"  >
+                                Nombre
+                            </label>
+                            <input 
+                                type="text"
+                                id="nombre"
+                                class="form-control"
+                                placeholder="Ingrese su nombre"
+                            >
+                        </div>
+                        <div class="mb-3" >
+                            <label for="correo" class="form-label"  >
+                                Correo electrónico
+                            </label>
+                            <input 
+                                type="email"
+                                id="correo"
+                                class="form-control"
+                                placeholder="nombre@correo.cl"
+                            >
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100" >
+                            Reservar mesa
+                        </button>
+                        </form>
+
+                        <div
+                            id="mensaje-resultado"
+                            class="mt-4"
+                            role="alert"
+                        >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+<body>
+    <footer id="contacto">
+        <p>Venta de comestibes - Viña del Mar</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

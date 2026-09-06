@@ -1,0 +1,7 @@
+body {
+  background-image: url("ruta/de/tu/imagen.jpg");
+  background-size: cover;       /* la imagen cubre todo el elemento */
+  background-position: center;  /* centrada */
+  background-repeat: no-repeat; /* que no se repita */
+  background-attachment: fixed; /* opcional: fija al hacer scroll */
+}
