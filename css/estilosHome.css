@@ -2,6 +2,7 @@
     --verde-oscuro: #241335;
     --verde-brand: #3b1f5c;
     --verde-claro: #d9b8ff;
+    --naranja: #ff9800;
     --negro: #000000;
     --crema: #fbf9f4;
     --texto-gris: #6b7280;
@@ -21,8 +22,9 @@ h1, h2, h3, .brand {
 .brand {
     font-size: 1.5rem;
     font-weight: 800;
-    color: var(--naranja);
+    color: var(--verde-brand);
     text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease; /* Le damos suavidad a la animación */
 }
 .brand-icon { margin-right: 6px; }
 
@@ -67,7 +69,7 @@ h1, h2, h3, .brand {
     padding: 10px 24px;
     font-weight: 600;
 }
-.btn-signup:hover { color: #fff; background: #142c0c; }
+.btn-signup:hover { color: #fff; background:var(--verde-oscuro); }
 
 /* ===== HERO ===== */
 .hero {
@@ -254,5 +256,22 @@ h1, h2, h3, .brand {
     .customer-row { justify-content: center; }
     .banner { flex-direction: column; align-items: center; text-align: center; }
     .banner img { max-width: 60%; }
+}
+
+.footer-brand{
+    background-color: var(--verde-oscuro);
+    color: var(--verde-oscuro);
+    width: 100%;
+    margin-top: 50px;
+}
+
+.footer-brand h5 {
+    color: #fff;
+    font-weight: 700;
+}
+
+.footer-brand hr {
+    border-color: rgba(217, 184, 255, 0.2);
+    margin: 20px 0;
 }
 

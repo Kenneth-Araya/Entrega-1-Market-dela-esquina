@@ -1,0 +1,32 @@
+/* =========================================
+   ESTILOS EXCLUSIVOS DEL CARRITO
+   ========================================= */
+
+/* Texto con el color morado de la marca */
+.text-brand {
+    color: #3b1f5c !important; 
+}
+
+/* Botones principales del carrito */
+.btn-brand {
+    background-color: #3b1f5c;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-brand:hover {
+    background-color: #241335; /* Un morado más oscuro para el hover */
+    color: white;
+}
+
+/* Fondo para el cuadro de resumen del total */
+.bg-resumen {
+    background-color: #fbf9f4; /* Un tono crema muy suave */
+    border: 1px solid #e5e7eb !important;
+}
+
+/* Opcional: Para darle un toque de sombra más suave a las tarjetas del carrito */
+.carrito-card-shadow {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
