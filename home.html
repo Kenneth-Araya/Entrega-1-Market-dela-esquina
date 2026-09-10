@@ -15,31 +15,13 @@
 
 <body>
     <main>
-        <section id="productos">
+        
+        <section id="productos" class="container my-4">
             <h2>Nuestros productos</h2>
-            <div class="productos">
-                <article class="tarjeta">
-                    <h3>Carne</h3>
-                    <p>Posta Negra vacuno</p>
-                    <p class="precio">$7.990</p>
-
-                    <button class="btn btn-outline-primary boton-agregar" data-producto="Café Latte">
-                        Agregar
-                    </button>
-
-                </article>
-
-                <article class="tarjeta">
-                    <h3>Capuchino</h3>
-                    <p>Café espresso,leche y espuma</p>
-                    <p class="precio">$3.200</p>
-                    <button class="btn btn-outline-primary boton-agregar " data-producto="Capuchino">
-                        Agregar
-                    </button>
-
-                </article>
-            </div>
+            <!-- Aquí es donde JavaScript inyectará las tarjetas de forma dinámica -->
+            <div id="contenedor-productos" class="row"></div>
         </section>
+
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

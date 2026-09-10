@@ -1,0 +1,43 @@
+/* ==========================================
+   ESTILOS TEMA: MORADO PASTEL & LIMPIO
+   Inspirado en el wireframe institucional
+   ========================================== */
+
+   :root{
+    --morado-principal: #9575CD;
+    --morado-oscuro: #7E57C2;
+    --morado-claro: #F3E9F9;    
+    --texto-oscuro: #2D3748;
+   }
+
+.btn-primary{
+    background-color: var(--morado-principal) !important;
+    border-color: var(--morado-principal) !important;
+}
+
+.btn-primary:hover, .btn-primary:focus{
+    background-color: var(--morado-oscuro)!important;
+    border-color: var(--morado-oscuro)!important;
+}
+
+.text-sucess{
+    color: #689F38 !important;
+}
+
+.card{
+    border: 1px solid #E2E8F0;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+}
+
+.sidebar-admin{
+    background-color: #fafafc;
+    border-right: 1px solid #E8E2F1;
+}
+
+.nav-link.active{
+    background-color: var(--morado-claro);
+    color: var(--morado-oscuro)!important;
+    font-weight: 600;
+    border-radius: 0.375rem;
+}

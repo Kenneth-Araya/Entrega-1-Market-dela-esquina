@@ -6,7 +6,7 @@ const mensajeResultado = document.getElementById("mensaje-resultado");
 formulario.addEventListener("submit", function(evento) {
     evento.preventDefault();
 
-    const correo = campoCorreo.value.trim();
+    const correo = campoCorreo.value.trim().toLowerCase();
     const contrasena = campoContrasena.value.trim();
 
     // 1. VERIFICAMOS QUE LOS CAMPOS DEL LOGIN NO ESTEN VACIOS
@@ -36,6 +36,9 @@ formulario.addEventListener("submit", function(evento) {
         mensajeResultado.className = "alert alert-danger mt-3";
         return; // Muro final. Si el correo no sirve, no se hace el Login.
     }
+
+    // SI SE PASAN TODAS LAS VALIDACIONES LO MANDA AL HOME 
+    window.location.href = "home.html"
 
 
 });
