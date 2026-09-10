@@ -13,36 +13,41 @@
 
 </head>
 
-<header>
-    <nav class="navbar navbar-expand-lg container py-3">
-        <a class="navbar-brand brand" href="#">
-            <span class="brand-icon">🛒</span> Market De La Esquina
-        </a>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg container py-3">
+            <a class="navbar-brand brand" href="home.html">
+                <span class="brand-icon">🛒</span> Market De La Esquina
+            </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-between" id="navMenu">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4">
-                <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#categorias">Catálogo</a></li>
-                <li class="nav-item"><a class="nav-link" href="#productos">Tienda</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-            </ul>
-
-            <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
-                <div class="search-box d-none d-md-flex">
-                    <span>🔍</span>
-                    <input type="text" placeholder="Buscar" aria-label="Buscar">
-                </div>
-                <button class="icon-btn" aria-label="Carrito">🛒</button>
-                <button class="btn btn-signup">Iniciar Sesion</button>
+            <!-- Contenedor derecho: Carrito junto al botón hamburguesa (dos rayitas) -->
+            <div class="d-flex align-items-center gap-2 ms-auto order-lg-last">
+                <a href="carrito.html" class="icon-btn text-decoration-none text-dark fs-5 d-flex align-items-center justify-content-center p-2" aria-label="Carrito">🛒</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-        </div>
-    </nav>
-</header>
 
+            <div class="collapse navbar-collapse justify-content-between" id="navMenu">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#categorias">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="productos.html"></li>
+                    <li class="nav-item"><a class="nav-link" href="#productos">Tienda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                    <div class="search-box d-none d-md-flex">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Buscar" aria-label="Buscar">
+                    </div>
+                    <button class="icon-btn" aria-label="Carrito">🛒</button>
+                    <button class="btn btn-signup">Iniciar Sesion</button>
+                </div>
+            </div>
+        </nav>
+    </header>
 <body>
     <!-- ===== HERO ===== -->
     <section class="container">
@@ -147,6 +152,11 @@
             <h2 class="section-title mb-3 mb-md-0">Todos Nuestros Productos</h2>
         </div>
 
+        <!-- Asegúrate de que este id esté presente para que el JS funcione -->
+        <div id="contenedor-productos" class="row g-4"></div>
+
+    <!-- </section>
+
         <div class="d-flex flex-wrap gap-2 align-items-center mb-4">
             <button class="btn filter-btn filter-btn-active">Todas las Categorías ▾</button>
             <button class="btn filter-btn">Precio ▾</button>
@@ -220,7 +230,7 @@
             </div>
 
         </div>
-    </section>
+    </section> -->
 
     <footer class="bg-dark text-light pt-4 pb-3 mt-5">
         <div class="container">
