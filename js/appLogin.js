@@ -1,4 +1,4 @@
-const formulario = document.getElementById("formulario-reserva");
+const formulario = document.getElementById("formulario-login");
 const campoCorreo = document.getElementById("correo");
 const campoContrasena = document.getElementById("contrasena");
 const mensajeResultado = document.getElementById("mensaje-resultado");
@@ -37,5 +37,6 @@ formulario.addEventListener("submit", function(evento) {
         return; // Muro final. Si el correo no sirve, no se hace el Login.
     }
 
-
+    //Si todas las validaciones funcionan se redirige a las pagina home ;)
+    window.location.href = "Home.html"; 
 });

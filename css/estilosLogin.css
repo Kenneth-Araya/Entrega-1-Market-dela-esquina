@@ -1,9 +1,11 @@
+/* Ajustar altura del body*/
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
+/* Agregar un fondo con una foto personalizada y ajutarla*/
 body {
   background-image: url("../img/SupermercadoFondo.jpg");
   background-size: cover;       
@@ -12,13 +14,15 @@ body {
   background-attachment: fixed; 
 }
 
-#formulario-reserva {
+/* Se ajustan parametros del formulario*/
+#formulario-login {
   max-width: 1000px;
   width: 80%;
   min-height: 300px; 
   margin: 0 auto;
 }
 
+/* Ajustes del footer*/
 #contacto {
     margin-top: 150px; 
 }
