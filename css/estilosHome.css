@@ -1,0 +1,258 @@
+:root {
+    --verde-oscuro: #241335;
+    --verde-brand: #3b1f5c;
+    --verde-claro: #d9b8ff;
+    --negro: #000000;
+    --crema: #fbf9f4;
+    --texto-gris: #6b7280;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #1b2a17;
+    background: #ffffff;
+}
+
+h1, h2, h3, .brand {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--naranja);
+    text-decoration: none;
+}
+.brand-icon { margin-right: 6px; }
+
+.nav-link {
+    color: #374151;
+    font-weight: 500;
+}
+.nav-link.active {
+    color: #111827;
+    font-weight: 600;
+    border-bottom: 2px solid var(--naranja);
+}
+
+.search-box {
+    background: #f3f4f6;
+    border-radius: 30px;
+    padding: 8px 16px;
+    align-items: center;
+    gap: 8px;
+    width: 220px;
+}
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+}
+
+.icon-btn {
+    background: var(--naranja);
+    color: #fff;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.btn-signup {
+    background: var(--verde-brand);
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 24px;
+    font-weight: 600;
+}
+.btn-signup:hover { color: #fff; background: #142c0c; }
+
+/* ===== HERO ===== */
+.hero {
+    background: var(--verde-oscuro);
+    border-radius: 28px;
+    padding: 48px;
+    overflow: hidden;
+}
+
+.badge-pill {
+    display: inline-block;
+    background: rgba(255,255,255,0.1);
+    color: var(--verde-claro);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--verde-claro);
+    line-height: 1.15;
+    margin-bottom: 28px;
+}
+.hero-title strong {
+    color: #ffd54a;
+    font-weight: 800;
+}
+
+.btn-shopnow {
+    background: var(--naranja);
+    color: #fff;
+    border-radius: 30px;
+    padding: 12px 32px;
+    font-weight: 600;
+    border: none;
+}
+.btn-shopnow:hover { background: #d94f14; color: #fff; }
+
+.customer-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 32px;
+}
+.avatars img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 2px solid var(--verde-oscuro);
+    margin-right: -12px;
+    object-fit: cover;
+}
+
+.hero-img {
+    max-width: 90%;
+    border-radius: 16px;
+}
+
+/* ===== CATEGORIES ===== */
+.section-title {
+    font-weight: 700;
+    color: var(--verde-brand);
+    font-size: 2rem;
+    margin-bottom: 28px;
+}
+
+.category-item {
+    text-align: center;
+    width: 100px;
+}
+.category-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 10px;
+}
+.category-item p {
+    font-weight: 500;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.bg-green  { background: #e6f4d7; }
+.bg-purple { background: #f2e8fb; }
+.bg-pink   { background: #fbe6e6; }
+.bg-orange { background: #fdeccd; }
+
+/* ===== BANNERS ===== */
+.banner {
+    border-radius: 24px;
+    padding: 36px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 280px;
+}
+.banner-peach { background: #fbdfae; }
+.banner-green { background: #a8d94a; }
+
+.banner-text h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    max-width: 240px;
+    margin-bottom: 20px;
+    color: #1b2a17;
+}
+.banner img {
+    max-width: 45%;
+    align-self: flex-end;
+}
+
+/* ===== PRODUCTS ===== */
+.filter-btn {
+    background: #f3f4f6;
+    border-radius: 30px;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    color: #374151;
+    border: none;
+}
+.filter-btn-active {
+    background: var(--verde-brand);
+    color: #fff;
+}
+.view-all {
+    color: var(--texto-gris);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    padding: 16px;
+    height: 100%;
+}
+.product-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    background: #f7f7f7;
+}
+.product-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    min-height: 44px;
+}
+.product-meta {
+    color: var(--texto-gris);
+    font-size: 0.85rem;
+}
+.product-price {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--verde-brand);
+}
+.btn-add {
+    background: var(--verde-brand);
+    color: #fff;
+    border: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.2rem; }
+    .hero { padding: 28px; text-align: center; }
+    .customer-row { justify-content: center; }
+    .banner { flex-direction: column; align-items: center; text-align: center; }
+    .banner img { max-width: 60%; }
+}
+

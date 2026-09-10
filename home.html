@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Inicio</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -13,34 +13,214 @@
 
 </head>
 
-<body>
-    <main>
-        <section id="productos">
-            <h2>Nuestros productos</h2>
-            <div class="productos">
-                <article class="tarjeta">
-                    <h3>Carne</h3>
-                    <p>Posta Negra vacuno</p>
-                    <p class="precio">$7.990</p>
+<header>
+    <nav class="navbar navbar-expand-lg container py-3">
+        <a class="navbar-brand brand" href="#">
+            <span class="brand-icon">🛒</span> Market De La Esquina
+        </a>
 
-                    <button class="btn btn-outline-primary boton-agregar" data-producto="Café Latte">
-                        Agregar
-                    </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                </article>
+        <div class="collapse navbar-collapse justify-content-between" id="navMenu">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4">
+                <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#categorias">Catálogo</a></li>
+                <li class="nav-item"><a class="nav-link" href="#productos">Tienda</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+            </ul>
 
-                <article class="tarjeta">
-                    <h3>Pollo</h3>
-                    <p>Tuto grande</p>
-                    <p class="precio">$7.000</p>
-                    <button class="btn btn-outline-primary boton-agregar " data-producto="Capuchino">
-                        Agregar
-                    </button>
-
-                </article>
+            <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                <div class="search-box d-none d-md-flex">
+                    <span>🔍</span>
+                    <input type="text" placeholder="Buscar" aria-label="Buscar">
+                </div>
+                <button class="icon-btn" aria-label="Carrito">🛒</button>
+                <button class="btn btn-signup">Iniciar Sesion</button>
             </div>
-        </section>
-    </main>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <!-- ===== HERO ===== -->
+    <section class="container">
+        <div class="hero">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <span class="badge-pill">🚚 Servicio de Entrega a Domicilio</span>
+                    <h1 class="hero-title">
+                        Entrega<br>
+                        <strong>Rápida</strong> y<br>
+                        <strong>Retiro</strong> Fácil.
+                    </h1>
+                    <button class="btn btn-shopnow">Comprar Ahora</button>
+
+                    <div class="customer-row">
+                        <div class="avatars">
+                            <img src="https://i.pravatar.cc/40?img=32" alt="Cliente 1">
+                            <img src="https://i.pravatar.cc/40?img=44" alt="Cliente 2">
+                            <img src="https://i.pravatar.cc/40?img=12" alt="Cliente 3">
+                        </div>
+                        <div>
+                            <p class="mb-0 text-white fw-semibold">Nuestros Clientes Felices</p>
+                            <p class="mb-0 text-white-50">⭐ 4.5 <span class="text-white">(12.5k Reseñas)</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <img src="img/hero-basket.png" alt="Canasta de verduras frescas" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CATEGORÍAS ===== -->
+    <section class="container my-5" id="categorias">
+        <h2 class="section-title">Compra por Categoría</h2>
+
+        <div class="d-flex flex-wrap gap-3 gap-md-4 justify-content-start category-row">
+            <div class="category-item">
+                <div class="category-circle bg-green">🥦</div>
+                <p>Verduras</p>
+            </div>
+            <div class="category-item">
+                <div class="category-circle bg-purple">🐟</div>
+                <p>Pescados</p>
+            </div>
+            <div class="category-item">
+                <div class="category-circle bg-pink">🥚</div>
+                <p>Huevos</p>
+            </div>
+            <div class="category-item">
+                <div class="category-circle bg-orange">🍞</div>
+                <p>Panadería</p>
+            </div>
+            <div class="category-item">
+                <div class="category-circle bg-purple">🧀</div>
+                <p>Quesos</p>
+            </div>
+            <div class="category-item">
+                <div class="category-circle bg-pink">🍌</div>
+                <p>Frutas</p>
+            </div>
+            <div class="category-item">
+                <div class="category-circle bg-green">🥩</div>
+                <p>Carnes</p>
+            </div>
+            <div class="category-item">
+                <div class="category-circle bg-purple">🥛</div>
+                <p>Lácteos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BANNERS ===== -->
+    <section class="container mb-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="banner banner-peach">
+                    <div class="banner-text">
+                        <h3>Productos frescos todos los días</h3>
+                        <button class="btn btn-shopnow">Comprar Ahora</button>
+                    </div>
+                    <img src="img/delivery-guy.png" alt="Repartidor con bolsas de productos">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="banner banner-green">
+                    <div class="banner-text">
+                        <h3>Un desayuno sano y fácil</h3>
+                        <button class="btn btn-shopnow">Comprar Ahora</button>
+                    </div>
+                    <img src="img/breakfast.png" alt="Plato de comida saludable">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRODUCTOS ===== -->
+    <section class="container mb-5" id="productos">
+        <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+            <h2 class="section-title mb-3 mb-md-0">Todos Nuestros Productos</h2>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 align-items-center mb-4">
+            <button class="btn filter-btn filter-btn-active">Todas las Categorías ▾</button>
+            <button class="btn filter-btn">Precio ▾</button>
+            <button class="btn filter-btn">Reseñas ▾</button>
+            <button class="btn filter-btn">Color ▾</button>
+            <button class="btn filter-btn">Ofertas ▾</button>
+            <button class="btn filter-btn">Marcas ▾</button>
+            <a href="#" class="ms-auto view-all">Ver Todo</a>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-6 col-md-3">
+                <div class="product-card">
+                    <img src="img/pan.jpg" alt="Pan amasado casero" class="product-img">
+                    <h6 class="product-name">Pan amasado casero</h6>
+                    <div class="d-flex justify-content-between align-items-center product-meta">
+                        <span>500gm</span>
+                        <span>⭐ (4.8/5)</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span class="product-price">$1.500</span>
+                        <button class="btn-add" data-producto="Pan amasado">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="product-card">
+                    <img src="img/queso.jpg" alt="Queso gauda laminado" class="product-img">
+                    <h6 class="product-name">Queso gauda laminado</h6>
+                    <div class="d-flex justify-content-between align-items-center product-meta">
+                        <span>250gm</span>
+                        <span>⭐ (4.7/5)</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span class="product-price">$3.200</span>
+                        <button class="btn-add" data-producto="Queso gauda">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="product-card">
+                    <img src="img/palta.jpg" alt="Palta hass madura" class="product-img">
+                    <h6 class="product-name">Palta hass madura</h6>
+                    <div class="d-flex justify-content-between align-items-center product-meta">
+                        <span>1 unidad</span>
+                        <span>⭐ (4.8/5)</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span class="product-price">$990</span>
+                        <button class="btn-add" data-producto="Palta hass">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="product-card">
+                    <img src="img/leche.jpg" alt="Leche entera Colun" class="product-img">
+                    <h6 class="product-name">Leche entera Colun</h6>
+                    <div class="d-flex justify-content-between align-items-center product-meta">
+                        <span>1L</span>
+                        <span>⭐ (4.6/5)</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span class="product-price">$1.190</span>
+                        <button class="btn-add" data-producto="Leche entera">+</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
