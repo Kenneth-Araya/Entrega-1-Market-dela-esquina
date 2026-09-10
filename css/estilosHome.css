@@ -107,7 +107,7 @@ h1, h2, h3, .brand {
     font-weight: 600;
     border: none;
 }
-.btn-shopnow:hover { background: #d94f14; color: #fff; }
+.btn-shopnow:hover { background: #3b1f5c;; color: #fff; }
 
 .customer-row {
     display: flex;
