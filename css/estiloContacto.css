@@ -72,3 +72,11 @@
     background-color: var(--verde-brand, #743fa8);
     transform: translateY(-2px); /* Se levanta sutilmente */
 }
+
+/* 1. Logo del Minimarket */
+#logo-contacto {
+    max-width: 180px; 
+    height: auto; 
+    margin: 0 auto 15px auto;
+    /* Eliminamos border-radius y box-shadow para mantener la forma cuadrada y plana original */
+}
