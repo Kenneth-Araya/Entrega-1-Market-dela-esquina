@@ -1,0 +1,17 @@
+/* Hacemos que la página ocupe toda la altura de la pantalla */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Convertimos el body en una caja flexible vertical */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Hacemos que el contenido principal crezca y empuje el footer hacia abajo */
+main {
+    flex: 1;
+}
