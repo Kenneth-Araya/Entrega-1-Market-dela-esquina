@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Market De La Esquina</title>
+
+    <!-- Corregido: un solo rel="stylesheet" -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Tu CSS principal -->
+    <link rel="stylesheet" href="css/estilosHome.css">
+
+</head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg container py-3">
+                <a class="navbar-brand brand" href="#">
+                    <span class="brand-icon"></span> Market De La Esquina
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navMenu">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4">
+                        <li class="nav-item"><a class="nav-link active" href="home.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                        <div class="search-box d-none d-md-flex">
+                            <span>🔍</span>
+                            <input type="text" placeholder="Buscar" aria-label="Buscar">
+                        </div>
+                        <button class="icon-btn" aria-label="Carrito">🛒</button>
+                        <button id="boton-login" class="btn btn-signup">Login</button>
+                        <button id="boton-registro" class="btn btn-signup">Registro</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container my-5">
+
+            <div class="text-center mb-5">
+                <!-- Este div vacío lo convertiremos en el cuadro con la "X" usando CSS después -->
+                <div id="caja-logo"></div>
+                <h2>Minimarket de la Esquina</h2>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="caja-formulario">
+                        <div class="encabezado-formulario text-center">
+                            <p>FORMULARIO DE CONTACTO</p>
+                        </div>
+
+                        <div class="cuerpo-formulario p-4">
+                            <form id="formContacto">
+
+                                <!--CAMPO NOMBRE-->
+                                <div class="mb-3">
+                                    <label for="nombre">NOMBRE COMPLETO</label>
+                                    <input type="text" class="form-control" id="nombre">
+                                </div>
+
+                                <!--CAMPO CORREO-->
+                                <div class="mb-3">
+                                    <label for="correo">CORREO</label>
+                                    <input type="email" class="form-control" id="correo">
+                                </div>
+
+                                <!--CAMPO CONTENIDO-->
+                                <div class="mb-3">
+                                    <label for="contenido">CONTENIDO</label>
+                                    <input type="textarea" class="form-control" id="contenido">
+                                </div>
+
+                                <!--BOTON PARA ENVIAR-->
+                                <div class="text-center mt-4">
+                                    <button type="button" class="btn btn-outline-dark">ENVIAR MENSAJE</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+</body>
+
+</html>
