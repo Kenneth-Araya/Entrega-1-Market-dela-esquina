@@ -1,4 +1,3 @@
-// Arreglo de productos basado en la nueva estructura del HTML de tu compañero
 const productos = [
     {
         id: 1,
