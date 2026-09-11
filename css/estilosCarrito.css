@@ -9,8 +9,8 @@
 
 /* Botones principales del carrito */
 .btn-brand {
-    background-color: #3b1f5c;
-    color: white;
+    background-color: #28ee00;
+    color: rgb(235, 5, 5);
     border: none;
     transition: background-color 0.3s ease;
 }
