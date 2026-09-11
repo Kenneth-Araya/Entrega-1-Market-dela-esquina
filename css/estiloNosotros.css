@@ -1,0 +1,117 @@
+/* ===== PORTADA: imagen de fondo con overlay oscuro (mismos tonos que .hero) ===== */
+.nosotros-portada {
+    background-image: linear-gradient(rgba(36, 19, 53, 0.85), rgba(36, 19, 53, 0.85)), url("../img/SupermercadoFondo.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 70px 24px;
+}
+.nosotros-portada-overlay {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nosotros-portada .badge-pill {
+    margin-bottom: 16px;
+}
+.nosotros-portada .hero-title {
+    margin-bottom: 10px;
+}
+ 
+/* ===== ESTADISTICAS: tarjetas cortas debajo de la portada ===== */
+.nosotros-stats-row {
+    margin-top: -40px;
+    position: relative;
+    z-index: 2;
+}
+.nosotros-stat {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    padding: 18px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.nosotros-stat-num {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--verde-brand);
+}
+.nosotros-stat-label {
+    font-size: 0.8rem;
+    color: var(--texto-gris);
+}
+ 
+/* ===== NUESTRA EMPRESA: imagen circular + lista con iconos ===== */
+.nosotros-img-circular {
+    width: 100%;
+    max-width: 340px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #f2e8fb;
+}
+.nosotros-lista {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+.nosotros-lista li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 500;
+}
+.nosotros-lista li:last-child {
+    border-bottom: none;
+}
+ 
+/* ===== MISION Y VISION: una sola tarjeta oscura dividida en dos ===== */
+.nosotros-mv {
+    background: var(--verde-oscuro);
+    border-radius: 28px;
+    overflow: hidden;
+}
+.nosotros-mv-col {
+    padding: 40px;
+    color: var(--verde-claro);
+}
+.nosotros-mv-col h3 {
+    color: #ffd54a;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+.nosotros-mv-borde {
+    border-bottom: 1px solid rgba(217, 184, 255, 0.2);
+}
+@media (min-width: 768px) {
+    .nosotros-mv-borde {
+        border-bottom: none;
+        border-right: 1px solid rgba(217, 184, 255, 0.2);
+    }
+}
+ 
+/* ===== DESARROLLADORES: tarjetas horizontales ===== */
+.nosotros-dev {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 100%;
+}
+.dev-avatar {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+ 

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Market De La Esquina</title>
+ 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilosHome.css">
+    <link rel="stylesheet" href="css/estiloNosotros.css">
+ 
+    <script src="js/appNosotros.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg container py-3">
+            <!-- Logo y Nombre -->
+            <a class="navbar-brand brand d-flex align-items-center gap-2 fw-bold" href="home.html">
+                <span class="brand-icon"></span> Market De La Esquina
+            </a>
+ 
+            <!-- Vista Móvil: Carrito y botón hamburguesa -->
+            <div class="d-flex align-items-center gap-3 d-lg-none">
+                <a href="carrito.html" class="text-decoration-none text-dark fs-5">🛒</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+ 
+            <!-- Menú Desplegable -->
+            <div class="collapse navbar-collapse" id="navMenu">
+ 
+                <!-- Enlaces Centrados -->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4 text-center mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home.html#categorias">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="nosotros.html">Nosotros</a></li>
+                </ul>
+ 
+                <!-- Botones de la Derecha (Buscador, Iniciar Sesión y Carrito) -->
+                <div class="d-flex flex-column flex-lg-row align-items-center gap-3 mt-3 mt-lg-0">
+                    <div class="search-box d-none d-md-flex align-items-center bg-light px-3 py-1 rounded-pill">
+                        <span class="me-2">🔍</span>
+                        <input type="text" placeholder="Buscar" aria-label="Buscar" style="border: none; background: transparent; outline: none;">
+                    </div>
+                    <button id="boton-login" class="btn btn-signup">Iniciar session</button>
+                    <button id="boton-registro" class="btn btn-signup">Registro</button>
+ 
+                    <!-- Vista Escritorio: El único carrito de la derecha -->
+                    <a href="carrito.html" class="d-none d-lg-block text-decoration-none text-dark fs-5 ms-2">🛒</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+ 
+    <main>
+        <!-- ===== ENCABEZADO: imagen de fondo con overlay, texto centrado ===== -->
+        <section class="nosotros-portada">
+            <div class="nosotros-portada-overlay">
+                <span class="badge-pill">🛍️ Desde el barrio, para el barrio</span>
+                <h1 class="hero-title text-center">
+                    Conoce <strong>Market</strong> De La <strong>Esquina</strong>
+                </h1>
+                <p class="text-white-50 text-center mb-0">
+                    El minimarket de siempre, ahora también online.
+                </p>
+            </div>
+        </section>
+ 
+        <!-- ===== ESTADISTICAS RAPIDAS ===== -->
+        <section class="container">
+            <div class="row g-3 nosotros-stats-row">
+                <div class="col-6 col-md-3">
+                    <div class="nosotros-stat">
+                        <span class="nosotros-stat-num">+8</span>
+                        <span class="nosotros-stat-label">Años en el barrio</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="nosotros-stat">
+                        <span class="nosotros-stat-num">100+</span>
+                        <span class="nosotros-stat-label">Productos frescos</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="nosotros-stat">
+                        <span class="nosotros-stat-num">12.5k</span>
+                        <span class="nosotros-stat-label">Clientes felices</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="nosotros-stat">
+                        <span class="nosotros-stat-num">⭐ 4.5</span>
+                        <span class="nosotros-stat-label">Reseña promedio</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- ===== NUESTRA EMPRESA: texto a la izquierda, imagen circular a la derecha ===== -->
+        <section class="container my-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <h2 class="section-title">Nuestra Empresa</h2>
+                    <p>
+                        Market De La Esquina es un minimarket de barrio dedicado a ofrecer productos de primera
+                        necesidad, abarrotes y alimentos frescos a precios convenientes, para que siempre tengas
+                        lo que necesitas cerca de casa.
+                    </p>
+                    <ul class="nosotros-lista">
+                        <li>🥦 Verduras y frutas frescas cada día</li>
+                        <li>🚚 Entrega a domicilio y retiro fácil</li>
+                        <li>🤝 Trato cercano, de barrio</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 text-center">
+                    <img src="img/canastaVerduras.jpg" alt="Productos frescos de Market De La Esquina" class="nosotros-img-circular">
+                </div>
+            </div>
+        </section>
+ 
+        <!-- ===== MISION Y VISION: tarjeta oscura dividida en dos columnas ===== -->
+        <section class="container mb-5">
+            <div class="nosotros-mv">
+                <div class="row g-0">
+                    <div class="col-md-6 nosotros-mv-col nosotros-mv-borde">
+                        <h3>Misión</h3>
+                        <p class="mb-0">
+                            Ofrecer a nuestra comunidad productos de calidad de forma cercana, rápida y
+                            accesible, facilitando la compra diaria de abarrotes y comestibles.
+                        </p>
+                    </div>
+                    <div class="col-md-6 nosotros-mv-col">
+                        <h3>Visión</h3>
+                        <p class="mb-0">
+                            Ser el minimarket de referencia del barrio, reconocido por su calidad, cercanía y
+                            confianza, creciendo tanto en tienda física como en línea.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- ===== DESARROLLADORES: tarjetas horizontales en lista ===== -->
+        <section class="container mb-5" id="desarrolladores">
+            <h2 class="section-title">Desarrolladores</h2>
+            <div class="row g-3">
+                <div class="col-12 col-md-4">
+                    <div class="nosotros-dev">
+                        <div class="dev-avatar bg-purple">👤</div>
+                        <div>
+                            <h6 class="product-name mb-0">Kenneth Araya</h6>
+                            <span class="product-meta">Frontend</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="nosotros-dev">
+                        <div class="dev-avatar bg-green">👤</div>
+                        <div>
+                            <h6 class="product-name mb-0">Bairon Valencia</h6>
+                            <span class="product-meta">Frontend</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="nosotros-dev">
+                        <div class="dev-avatar bg-orange">👤</div>
+                        <div>
+                            <h6 class="product-name mb-0">Jonathan Cornejo</h6>
+                            <span class="product-meta">Frontend</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+ 
+    <footer class="footer-brand pt-4 pb-3">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-4 mb-3">
+                    <h5>Market De La Esquina</h5>
+                    <p class="mb-1">📍 Av. Siempre Viva 742, Santiago</p>
+                    <p class="mb-1">📞 +56 9 1234 5678</p>
+                    <p class="mb-0">✉️ contacto@marketdelaesquina.cl</p>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2026 Market De La Esquina. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+ 

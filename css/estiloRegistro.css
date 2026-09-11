@@ -1,0 +1,8 @@
+/*Se agrega fondo de pantalla para el body*/
+body {
+  background-image: url("../img/SupermercadoFondo.jpg");
+  background-size: cover;       
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}

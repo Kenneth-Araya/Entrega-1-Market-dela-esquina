@@ -4,7 +4,7 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
+ 
 /* Agregar un fondo con una foto personalizada y ajutarla*/
 body {
   background-image: url("../img/SupermercadoFondo.jpg");
@@ -13,7 +13,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed; 
 }
-
+ 
 /* Se ajustan parametros del formulario*/
 #formulario-login {
   max-width: 1000px;
@@ -21,8 +21,39 @@ body {
   min-height: 300px; 
   margin: 0 auto;
 }
-
+ 
 /* Ajustes del footer*/
 #contacto {
     margin-top: 150px; 
+}
+ 
+/* Enlace "Admin" en la esquina superior derecha */
+.admin-link {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: #371e54;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.2s ease;
+}
+.admin-link:hover {
+    background-color: #241335;
+    color: #fff;
+}
+ 
+/* Botón "Iniciar" en morado, igual al color de marca */
+.btn-morado {
+    background-color: #371e54;
+    color: #fff;
+    border: none;
+}
+.btn-morado:hover {
+    background-color: #241335;
+    color: #fff;
 }

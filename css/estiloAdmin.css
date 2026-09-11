@@ -1,0 +1,273 @@
+/* ===== PANEL ADMIN: usa las variables ya definidas en estilosHome.css ===== */
+ 
+body.admin-body {
+    background: var(--crema);
+}
+ 
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+ 
+/* ===== SIDEBAR: mismo morado oscuro del .hero del home ===== */
+.admin-sidebar {
+    width: 250px;
+    min-width: 250px;
+    background: var(--verde-oscuro);
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+ 
+.admin-brand {
+    color: var(--verde-claro);
+    font-weight: 800;
+    font-size: 1.05rem;
+    text-decoration: none;
+    padding: 0 20px 20px;
+    border-bottom: 1px solid rgba(217, 184, 255, 0.2);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+ 
+.admin-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+ 
+.admin-nav .admin-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    color: var(--verde-claro);
+    text-decoration: none;
+    font-weight: 500;
+    border-left: 3px solid transparent;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.admin-nav .admin-nav-link:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+}
+.admin-nav .admin-nav-link.active {
+    color: var(--naranja);
+    background: rgba(255, 255, 255, 0.06);
+    border-left-color: var(--naranja);
+    font-weight: 700;
+}
+ 
+.admin-logout {
+    padding: 12px 20px;
+    border-top: 1px solid rgba(217, 184, 255, 0.2);
+    margin-top: 12px;
+}
+.admin-logout .admin-nav-link {
+    color: #f3c6c6;
+}
+.admin-logout .admin-nav-link:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffb0b0;
+}
+ 
+/* ===== CONTENIDO ===== */
+.admin-contenido {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+ 
+.admin-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 32px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+ 
+.admin-topbar-user {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: #1b2a17;
+}
+ 
+.admin-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--verde-brand);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+ 
+.admin-main {
+    padding: 32px;
+    flex-grow: 1;
+}
+ 
+/* ===== TARJETAS DE ESTADISTICAS (mismo look que .product-card) ===== */
+.admin-stat-card {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    padding: 22px;
+    height: 100%;
+}
+.admin-stat-label {
+    color: var(--texto-gris);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.admin-stat-num {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--verde-brand);
+}
+ 
+/* ===== TARJETA GENERICA / ACTIVIDAD ===== */
+.admin-card {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    padding: 24px;
+}
+.admin-card h5 {
+    color: var(--verde-brand);
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+.admin-activity-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #1b2a17;
+}
+.admin-activity-item:last-child {
+    border-bottom: none;
+}
+.admin-activity-item .admin-fecha {
+    color: var(--texto-gris);
+    font-size: 0.85rem;
+}
+ 
+/* ===== TABLAS (para admin-productos.html / admin-usuarios.html) ===== */
+.admin-tabla {
+    margin-bottom: 0;
+}
+.admin-tabla thead th {
+    color: var(--verde-brand);
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+.admin-tabla td, .admin-tabla th {
+    vertical-align: middle;
+}
+.admin-tabla tbody tr:hover {
+    background: #f8f5fc;
+}
+ 
+.admin-badge-activo {
+    background: #e6f4d7;
+    color: #4c7a1f;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+.admin-badge-inactivo {
+    background: #fbe6e6;
+    color: #b23a3a;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+ 
+.admin-icon-btn {
+    background: #f3f4f6;
+    border: none;
+    color: #374151;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.admin-icon-btn:hover {
+    background: var(--verde-brand);
+    color: #fff;
+}
+.admin-icon-btn.eliminar:hover {
+    background: #b23a3a;
+    color: #fff;
+}
+ 
+/* ===== FORMULARIOS (para admin-nuevo-producto.html, etc.) ===== */
+.admin-form-card {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 700px;
+}
+ 
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .admin-layout {
+        flex-direction: column;
+    }
+    .admin-sidebar {
+        width: 100%;
+        min-width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 16px;
+    }
+    .admin-brand {
+        border-bottom: none;
+        padding: 0 12px;
+        margin-bottom: 0;
+    }
+    .admin-nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .admin-nav .admin-nav-link {
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        padding: 10px 14px;
+    }
+    .admin-nav .admin-nav-link.active {
+        border-left-color: transparent;
+        border-bottom-color: var(--naranja);
+    }
+    .admin-logout {
+        border-top: none;
+        margin-top: 0;
+    }
+    .admin-main {
+        padding: 20px;
+    }
+}
