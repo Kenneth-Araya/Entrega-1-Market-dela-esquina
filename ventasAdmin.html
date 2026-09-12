@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Administración - Market De La Esquina</title>
- 
+    <title>Ventas - Market De La Esquina</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilosHome.css">
     <link rel="stylesheet" href="css/estiloAdmin.css">
     <script src="js/appAdmin.js" defer></script>
+    <script src="js/appVentasAdmin.js" defer></script>
 </head>
 <body class="admin-body">
     <div class="admin-layout">
- 
+
         <!-- ===== SIDEBAR ===== -->
         <aside class="admin-sidebar">
             <a href="home.html" class="admin-brand">
                 <span class="brand-icon"></span> Market De La Esquina
             </a>
- 
+
             <ul class="admin-nav">
                 <li><a class="admin-nav-link" href="admin.html" data-pagina="admin.html">Inicio</a></li>
                 <li><a class="admin-nav-link" href="productosAdmin.html" data-pagina="productosAdmin.html">Productos</a></li>
@@ -27,18 +28,18 @@
                 <li><a class="admin-nav-link" href="reportesAdmin.html" data-pagina="admin-reportes.html">Reportes</a></li>
                 <li><a class="admin-nav-link" href="configuracionAdmin.html" data-pagina="admin-configuracion.html">Configuracion</a></li>
             </ul>
- 
+
             <div class="admin-logout">
                 <a href="#" id="boton-logout" class="admin-nav-link">Cerrar sesión</a>
             </div>
         </aside>
- 
+
         <!-- ===== CONTENIDO ===== -->
         <div class="admin-contenido">
- 
+
             <!-- Topbar -->
             <div class="admin-topbar">
-                <h5 class="mb-0">Panel de Administración</h5>
+                <h5 class="mb-0">Ventas</h5>
                 <div class="admin-topbar-user">
                     <span class="fs-5" aria-label="Notificaciones"></span>
                     <div class="d-flex align-items-center gap-2">
@@ -47,80 +48,66 @@
                     </div>
                 </div>
             </div>
- 
+
             <!-- Main -->
             <main class="admin-main">
-                <h2 class="section-title">Bienvenido de vuelta</h2>
- 
+                <h2 class="section-title">Historial de ventas</h2>
+
                 <!-- Tarjetas de estadísticas -->
                 <div class="row g-4 mb-4">
                     <div class="col-6 col-lg-3">
                         <div class="admin-stat-card">
-                            <div class="admin-stat-label">Productos</div>
-                            <div class="admin-stat-num">24</div>
+                            <div class="admin-stat-label">Ventas totales</div>
+                            <div class="admin-stat-num" id="stat-ventas-totales">0</div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="admin-stat-card">
-                            <div class="admin-stat-label">Usuarios</div>
-                            <div class="admin-stat-num">12</div>
+                            <div class="admin-stat-label">Ingresos totales</div>
+                            <div class="admin-stat-num" id="stat-ingresos-totales">$0</div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="admin-stat-card">
-                            <div class="admin-stat-label">Ventas del mes</div>
-                            <div class="admin-stat-num">37</div>
+                            <div class="admin-stat-label">Ticket promedio</div>
+                            <div class="admin-stat-num" id="stat-ticket-promedio">$0</div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="admin-stat-card">
-                            <div class="admin-stat-label">Ingresos del mes</div>
-                            <div class="admin-stat-num">$482k</div>
+                            <div class="admin-stat-label">Última venta</div>
+                            <div class="admin-stat-num" id="stat-ultima-venta">-</div>
                         </div>
                     </div>
                 </div>
- 
-                <div class="row g-4">
-                    <!-- Accesos rápidos -->
-                    <div class="col-lg-5">
-                        <div class="admin-card h-100">
-                            <h5>Accesos rápidos</h5>
-                            <div class="d-grid gap-2">
-                                <a href="admin-productos.html" class="btn btn-shopnow">➕ Nuevo producto</a>
-                                <a href="admin-usuarios.html" class="btn btn-signup">➕ Nuevo usuario</a>
-                                <a href="admin-productos.html" class="btn btn-signup">📦 Ver todos los productos</a>
-                                <a href="admin-usuarios.html" class="btn btn-signup">👥 Ver todos los usuarios</a>
-                            </div>
-                        </div>
+
+                <!-- Tabla de ventas -->
+                <div class="admin-card">
+                    <h5>Detalle de ventas</h5>
+                    <div class="table-responsive">
+                        <table class="table admin-tabla">
+                            <thead>
+                                <tr>
+                                    <th>N° Venta</th>
+                                    <th>Fecha</th>
+                                    <th>Productos</th>
+                                    <th>Total</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-ventas">
+                                <!-- Aquí se inyectarán las filas cuando se agregue el script correspondiente -->
+                            </tbody>
+                        </table>
                     </div>
- 
-                    <!-- Actividad reciente -->
-                    <div class="col-lg-7">
-                        <div class="admin-card h-100">
-                            <h5>Actividad reciente</h5>
-                            <div class="admin-activity-item">
-                                <span>📦 Producto "Pan amasado casero" agregado</span>
-                                <span class="admin-fecha">Hoy</span>
-                            </div>
-                            <div class="admin-activity-item">
-                                <span>👤 Usuario "Bairo Valencia" registrado</span>
-                                <span class="admin-fecha">Ayer</span>
-                            </div>
-                            <div class="admin-activity-item">
-                                <span>🛒 Venta realizada por $12.400</span>
-                                <span class="admin-fecha">Ayer</span>
-                            </div>
-                            <div class="admin-activity-item">
-                                <span>📦 Producto "Queso gauda laminado" editado</span>
-                                <span class="admin-fecha">Hace 2 días</span>
-                            </div>
-                        </div>
-                    </div>
+                    <p id="mensaje-ventas-vacio" class="text-muted text-center py-4 d-none">
+                        No hay ventas registradas.
+                    </p>
                 </div>
             </main>
         </div>
     </div>
- 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

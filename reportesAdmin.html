@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - Market De La Esquina</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilosHome.css">
+    <link rel="stylesheet" href="css/estiloAdmin.css">
+    <script src="js/appAdmin.js" defer></script>
+    <script src="js/appReportesAdmin.js" defer></script>
+</head>
+<body class="admin-body">
+    <div class="admin-layout">
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="admin-sidebar">
+            <a href="home.html" class="admin-brand">
+                <span class="brand-icon"></span> Market De La Esquina
+            </a>
+
+            <ul class="admin-nav">
+                <li><a class="admin-nav-link" href="admin.html" data-pagina="admin.html">Inicio</a></li>
+                <li><a class="admin-nav-link" href="productosAdmin.html" data-pagina="productosAdmin.html">Productos</a></li>
+                <li><a class="admin-nav-link" href="usuariosAdmin.html" data-pagina="usuariosAdmin.html">Usuarios</a></li>
+                <li><a class="admin-nav-link" href="ventasAdmin.html" data-pagina="ventasAdmin.html">Ventas</a></li>
+                <li><a class="admin-nav-link active" href="reportesAdmin.html" data-pagina="reportesAdmin.html">Reportes</a></li>
+                <li><a class="admin-nav-link" href="configuracionAdmin.html" data-pagina="admin-configuracion.html">Configuracion</a></li>
+            </ul>
+
+            <div class="admin-logout">
+                <a href="#" id="boton-logout" class="admin-nav-link">Cerrar sesión</a>
+            </div>
+        </aside>
+
+        <!-- ===== CONTENIDO ===== -->
+        <div class="admin-contenido">
+
+            <!-- Topbar -->
+            <div class="admin-topbar">
+                <h5 class="mb-0">Reportes</h5>
+                <div class="admin-topbar-user">
+                    <span class="fs-5" aria-label="Notificaciones"></span>
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="admin-avatar">A</div>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main -->
+            <main class="admin-main">
+                <h2 class="section-title">Reporte general del negocio</h2>
+
+                <!-- Tarjetas de estadísticas -->
+                <div class="row g-4 mb-4">
+                    <div class="col-6 col-lg-3">
+                        <div class="admin-stat-card">
+                            <div class="admin-stat-label">Ingresos totales</div>
+                            <div class="admin-stat-num" id="stat-ingresos-totales">$0</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="admin-stat-card">
+                            <div class="admin-stat-label">Ventas totales</div>
+                            <div class="admin-stat-num" id="stat-ventas-totales">0</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="admin-stat-card">
+                            <div class="admin-stat-label">Producto estrella</div>
+                            <div class="admin-stat-num" id="stat-producto-estrella">-</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="admin-stat-card">
+                            <div class="admin-stat-label">Usuarios registrados</div>
+                            <div class="admin-stat-num" id="stat-usuarios-registrados">0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Reporte de ventas por producto -->
+                    <div class="col-lg-7">
+                        <div class="admin-card h-100">
+                            <h5>Ventas por producto</h5>
+                            <div class="table-responsive">
+                                <table class="table admin-tabla">
+                                    <thead>
+                                        <tr>
+                                            <th>Producto</th>
+                                            <th>Unidades vendidas</th>
+                                            <th>Ingresos generados</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tabla-reporte-productos">
+                                        <!-- Aquí se inyectarán las filas cuando se agregue el script correspondiente -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p id="mensaje-reporte-productos-vacio" class="text-muted text-center py-4 d-none">
+                                No hay datos de ventas para generar el reporte.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Reporte de usuarios por tipo -->
+                    <div class="col-lg-5">
+                        <div class="admin-card h-100">
+                            <h5>Usuarios por tipo</h5>
+                            <div class="table-responsive">
+                                <table class="table admin-tabla">
+                                    <thead>
+                                        <tr>
+                                            <th>Tipo de usuario</th>
+                                            <th>Cantidad</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tabla-reporte-usuarios">
+                                        <!-- Aquí se inyectarán las filas cuando se agregue el script correspondiente -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p id="mensaje-reporte-usuarios-vacio" class="text-muted text-center py-4 d-none">
+                                No hay usuarios registrados para generar el reporte.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
