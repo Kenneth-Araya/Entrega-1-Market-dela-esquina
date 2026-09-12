@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,17 +14,18 @@
     <!-- Usamos el mismo script para que renderice los productos y maneje el carrito -->
     <script src="js/appHome.js" defer></script>
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg container py-3">
             <a class="navbar-brand brand" href="#">
                 <span class="brand-icon"></span> Market De La Esquina
             </a>
-    
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <div class="collapse navbar-collapse justify-content-between" id="navMenu">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4">
                     <li class="nav-item"><a class="nav-link active" href="home.html">Inicio</a></li>
@@ -31,27 +33,44 @@
                     <li class="nav-item"><a class="nav-link active" href="nosotros.html">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
                 </ul>
-    
+
                 <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
-                    <button class="icon-btn" aria-label="Carrito">🛒</button>
+                    <a href="carrito.html"
+                        class="icon-btn position-relative text-decoration-none d-flex align-items-center justify-content-center"
+                        aria-label="Carrito">
+                        <span style="font-size: 1.3rem;">🛒</span>
+                        <span id="cart-badge"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none"
+                            style="font-size: 0.75rem; border: 2px solid white;">
+                            0
+                        </span>
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Contenido Principal: Cuadros pequeños con la lista de productos -->
-    <main class="container my-5" id="productos">
-        <div class="d-flex justify-content-between align-items-center mb-4">
+    <!-- ===== PRODUCTOS ===== -->
+    <section class="container mb-5" id="productos">
+        <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
             <h2 class="section-title mb-3 mb-md-0">Todos Nuestros Productos</h2>
         </div>
 
+        <!-- El archivo appHome.js inyectará las tarjetas aquí automáticamente -->
         <div id="contenedor-productos" class="row g-4"></div>
-    </main>
-    
+    </section>
 
 
-    <!-- Bootstrap Bundle JS -->
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- 1. Primero carga el badge -->
+    <script src="js/badge.js" defer></script>
+
+    <!-- 2. Luego carga la lógica de tu página -->
+    <script src="js/appHome.js" defer></script>
+
 </body>
+
 </html>

@@ -34,7 +34,16 @@
                 </ul>
 
                 <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
-                    <button class="icon-btn" aria-label="Carrito">🛒</button>
+                    <a href="carrito.html"
+                        class="icon-btn position-relative text-decoration-none d-flex align-items-center justify-content-center"
+                        aria-label="Carrito">
+                        <span style="font-size: 1.3rem;">🛒</span>
+                        <span id="cart-badge"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none"
+                            style="font-size: 0.75rem; border: 2px solid white;">
+                            0
+                        </span>
+                    </a>
                 </div>
             </div>
         </nav>

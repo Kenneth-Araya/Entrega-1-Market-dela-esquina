@@ -38,6 +38,14 @@ h1, h2, h3, .brand {
     border-bottom: 2px solid var(--naranja);
 }
 
+.product-card {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    padding: 16px;
+    height: auto; /* Cambiamos de 100% a auto para que la tarjeta mida solo lo necesario */
+}
+
 .search-box {
     background: #f3f4f6;
     border-radius: 30px;

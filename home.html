@@ -32,7 +32,19 @@
             </ul>
 
             <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
-                <button class="icon-btn" aria-label="Carrito">🛒</button>
+
+                <!-- NUEVO ÍCONO DEL CARRITO CON CONTADOR -->
+                <a href="carrito.html"
+                    class="icon-btn position-relative text-decoration-none d-flex align-items-center justify-content-center"
+                    aria-label="Carrito">
+                    <span style="font-size: 1.3rem;">🛒</span>
+                    <span id="cart-badge"
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none"
+                        style="font-size: 0.75rem; border: 2px solid white;">
+                        0
+                    </span>
+                </a>
+
                 <button id="boton-login" class="btn btn-signup">Login</button>
                 <button id="boton-registro" class="btn btn-signup">Registro</button>
             </div>
@@ -49,7 +61,7 @@
                     <h1 class="hero-title">
                         Bienvenido a<br>
                         <strong>Minimarket</strong><br>
-                        <strong>de la Esquina</strong> 
+                        <strong>de la Esquina</strong>
                     </h1>
 
                     <div class="customer-row">
@@ -97,70 +109,8 @@
             <h2 class="section-title mb-3 mb-md-0">Todos Nuestros Productos</h2>
         </div>
 
-
-        <div class="row g-4">
-
-            <div class="col-6 col-md-3">
-                <div class="product-card">
-                    <img src="img/pan.jpg" alt="Pan amasado casero" class="product-img">
-                    <h6 class="product-name">Pan amasado casero</h6>
-                    <div class="d-flex justify-content-between align-items-center product-meta">
-                        <span>500gm</span>
-                        <span>⭐ (4.8/5)</span>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center mt-2">
-                        <span class="product-price">$1.500</span>
-                        <button class="btn-add" data-producto="Pan amasado">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-                <div class="product-card">
-                    <img src="img/queso.jpg" alt="Queso gauda laminado" class="product-img">
-                    <h6 class="product-name">Queso gauda laminado</h6>
-                    <div class="d-flex justify-content-between align-items-center product-meta">
-                        <span>250gm</span>
-                        <span>⭐ (4.7/5)</span>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center mt-2">
-                        <span class="product-price">$3.200</span>
-                        <button class="btn-add" data-producto="Queso gauda">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-                <div class="product-card">
-                    <img src="img/palta.jpg" alt="Palta hass madura" class="product-img">
-                    <h6 class="product-name">Palta hass madura</h6>
-                    <div class="d-flex justify-content-between align-items-center product-meta">
-                        <span>1 unidad</span>
-                        <span>⭐ (4.8/5)</span>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center mt-2">
-                        <span class="product-price">$990</span>
-                        <button class="btn-add" data-producto="Palta hass">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-                <div class="product-card">
-                    <img src="img/leche.jpg" alt="Leche entera Colun" class="product-img">
-                    <h6 class="product-name">Leche entera Colun</h6>
-                    <div class="d-flex justify-content-between align-items-center product-meta">
-                        <span>1L</span>
-                        <span>⭐ (4.6/5)</span>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center mt-2">
-                        <span class="product-price">$1.190</span>
-                        <button class="btn-add" data-producto="Leche entera">+</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        <!-- El archivo appHome.js inyectará las tarjetas aquí automáticamente -->
+        <div id="contenedor-productos" class="row g-4"></div>
     </section>
 
     <footer class="footer-brand text-light pt-4 pb-3 mt-5">

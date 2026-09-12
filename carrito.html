@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,17 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/estilosHome.css">
 
-    <!-- CSS General del proyecto (El de tu compañero) -->
+    <!-- Estilos del proyecto -->
     <link rel="stylesheet" href="css/estilosHome.css">
-    
-    <!-- TU NUEVO CSS EXCLUSIVO PARA ESTA VISTA -->
     <link rel="stylesheet" href="css/estilosCarrito.css">
-    
 </head>
 
 <body class="bg-light">
     <header class="bg-white border-bottom shadow-sm">
         <nav class="navbar navbar-expand-lg container py-3">
-            <!-- Logo corregido (ya no se ve como link azul) -->
-            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-decoration-none" href="home.html" style="color: #371e54; font-size: 1.5rem;">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-decoration-none" href="home.html"
+                style="color: #371e54; font-size: 1.5rem;">
                 <span>🛒</span> Market De La Esquina
             </a>
 
@@ -39,7 +36,7 @@
             <div class="col-lg-8">
                 <div class="card shadow-sm border-0 p-3">
                     <div id="contenedor-carrito-items">
-                        <!-- JavaScript cargará los ítems aquí -->
+                        <!-- El script cargará los ítems aquí -->
                     </div>
                 </div>
             </div>
@@ -58,87 +55,21 @@
                         <span id="total-carrito" class="fs-5 fw-bold text-success">$0</span>
                     </div>
                     <button class="btn btn-primary w-100 mb-2" onclick="finalizarCompra()">Finalizar Venta</button>
-                    <button class="btn btn-outline-danger w-100 btn-sm" onclick="limpiarCarrito()">Vaciar Carrito</button>
+                    <button class="btn btn-outline-danger w-100 btn-sm" onclick="limpiarCarrito()">Vaciar
+                        Carrito</button>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Script para renderizar el carrito -->
-    <script>
-        function cargarCarrito() {
-            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-            const contenedor = document.getElementById("contenedor-carrito-items");
-            const subtotalEl = document.getElementById("subtotal-carrito");
-            const totalEl = document.getElementById("total-carrito");
-
-            contenedor.innerHTML = "";
-
-            if (carrito.length === 0) {
-                contenedor.innerHTML = `<p class="text-muted text-center py-4">Tu carrito está vacío.</p>`;
-                subtotalEl.innerText = "$0";
-                totalEl.innerText = "$0";
-                return;
-            }
-
-            let subtotalTotal = 0;
-
-            carrito.forEach(function(producto, index) {
-                let cantidad = producto.cantidad || 1;
-                let subtotalProducto = producto.precio * cantidad;
-                subtotalTotal += subtotalProducto;
-
-                const itemDiv = document.createElement("div");
-                itemDiv.className = "d-flex align-items-center justify-content-between border-bottom py-3";
-
-                itemDiv.innerHTML = `
-                    <div class="d-flex align-items-center gap-3">
-                        <img src="${producto.imagen}" alt="${producto.nombre}" style="width: 60px; height: 60px; object-fit: contain;" class="bg-light rounded p-1">
-                        <div>
-                            <h6 class="fw-bold mb-1">${producto.nombre}</h6>
-                            <small class="text-muted">Precio: $${producto.precio} | Cantidad: ${cantidad}</small>
-                        </div>
-                    </div>
-                    <div class="text-end">
-                        <span class="fw-bold text-success d-block mb-1">$${subtotalProducto}</span>
-                        <button class="btn btn-sm btn-outline-danger" onclick="eliminarItem(${index})">🗑️</button>
-                    </div>
-                `;
-                contenedor.appendChild(itemDiv);
-            });
-
-            subtotalEl.innerText = `$${subtotalTotal}`;
-            totalEl.innerText = `$${subtotalTotal}`;
-        }
-
-        function eliminarItem(index) {
-            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-            carrito.splice(index, 1);
-            localStorage.setItem("carrito", JSON.stringify(carrito));
-            cargarCarrito();
-        }
-
-        function limpiarCarrito() {
-            localStorage.removeItem("carrito");
-            cargarCarrito();
-        }
-
-        function finalizarCompra() {
-            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-            if (carrito.length === 0) {
-                alert("El carrito está vacío.");
-                return;
-            }
-            alert("¡Compra finalizada con éxito! Gracias por comprar en Market De La Esquina.");
-            localStorage.removeItem("carrito");
-            cargarCarrito();
-        }
-
-        document.addEventListener("DOMContentLoaded", cargarCarrito);
-    </script>
-
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 1. Script Global del Badge (AGREGA ESTA LÍNEA) -->
+    <script src="js/badge.js" defer></script>
+
+    <!-- 2. Script Externo del Carrito -->
+    <script src="js/appCarrito.js" defer></script>
 </body>
 
 </html>
-    
