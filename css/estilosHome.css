@@ -62,8 +62,8 @@ h1, h2, h3, .brand {
 }
 
 .icon-btn {
-    background: var(--naranja);
-    color: #fff;
+    background: #3b1f5c;
+    color: #3b1f5c;
     border: none;
     width: 42px;
     height: 42px;

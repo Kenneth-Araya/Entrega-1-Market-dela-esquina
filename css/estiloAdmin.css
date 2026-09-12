@@ -58,7 +58,7 @@ body.admin-body {
     color: #fff;
 }
 .admin-nav .admin-nav-link.active {
-    color: var(--naranja);
+    color: #3b1f5c;;
     background: rgba(255, 255, 255, 0.06);
     border-left-color: var(--naranja);
     font-weight: 700;

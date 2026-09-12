@@ -37,6 +37,14 @@ formulario.addEventListener("submit", function(evento) {
         return; // Muro final. Si el correo no sirve, no se hace el Login.
     }
 
+    //maximo 100 caracteres
+    if (correo.length > 100) {
+    mensajeResultado.textContent =
+        "El correo no puede superar los 100 caracteres.";
+    mensajeResultado.className = "alert alert-danger mt-3";
+    return;
+}
+
     //Si todas las validaciones funcionan se redirige a las pagina home ;)
-    window.location.href = "Home.html"; 
+    window.location.href = "home.html"; 
 });
