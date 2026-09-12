@@ -1,0 +1,76 @@
+/* =========================================
+   ESTILOS VISTA BLOGS - MARKET DE LA ESQUINA
+========================================= */
+
+/* Título principal de la página */
+.titulo-blogs {
+    color: #000;
+    letter-spacing: 1px;
+}
+
+/* Contenedor principal (El fondo gris que envuelve la noticia) */
+.card-blog-gris {
+    background-color: #e2e2e2; /* Gris del mockup */
+    padding: 3rem; /* Espacio interno para que la imagen no toque los bordes */
+    border-radius: 0;
+    width: 100%;
+}
+
+/* Tipografía de los casos */
+.titulo-caso {
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.parrafo-caso {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Estilo del recuadro del Dato Curioso (Efecto Wireframe/Mockup) */
+.recuadro-wireframe {
+    border: 2px solid #000; /* Borde negro grueso */
+    box-shadow: 4px 4px 0px #000; /* Sombra dura negra típica de diseño UX */
+    border-radius: 0; /* Puntas cuadradas */
+    transition: transform 0.2s;
+}
+
+.recuadro-wireframe:hover {
+    transform: translate(-2px, -2px); /* Pequeño efecto al pasar el mouse */
+    box-shadow: 6px 6px 0px #000;
+}
+
+/* Colores y detalles del texto interior */
+.texto-marca {
+    color: #371e54; /* Morado institucional de tu proyecto */
+}
+
+.detalle-curioso {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* Estilo de la imagen encuadrada */
+.img-caso {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border: 2px solid #333; /* Borde oscuro para enmarcar la foto como en el diseño */
+}
+
+/* Adaptación para pantallas de celular */
+@media (max-width: 768px) {
+    .card-blog-gris {
+        padding: 1.5rem;
+    }
+    .columna-imagen {
+        margin-top: 2rem;
+    }
+    .img-caso {
+        height: 250px;
+    }
+}

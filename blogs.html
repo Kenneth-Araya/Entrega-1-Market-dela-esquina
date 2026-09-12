@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - Market De La Esquina</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos del proyecto -->
+    <link rel="stylesheet" href="css/estilosHome.css">
+
+    <link rel="stylesheet" href="css/estiloBlogs.css">
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg container py-3">
+        <a class="navbar-brand brand" href="#">
+            <span class="brand-icon"></span> Market De La Esquina
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navMenu">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4">
+                <li class="nav-item"><a class="nav-link" href="home.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            </ul>
+
+            <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+
+                <!-- NUEVO ÍCONO DEL CARRITO CON CONTADOR -->
+                <a href="carrito.html"
+                    class="icon-btn position-relative text-decoration-none d-flex align-items-center justify-content-center"
+                    aria-label="Carrito">
+                    <span style="font-size: 1.3rem;">🛒</span>
+                    <span id="cart-badge"
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none"
+                        style="font-size: 0.75rem; border: 2px solid white;">
+                        0
+                    </span>
+                </a>
+
+                <button id="boton-login" class="btn btn-signup">Login</button>
+                <button id="boton-registro" class="btn btn-signup">Registro</button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body class="bg-white">
+
+    <!-- CONTENIDO PRINCIPAL: BLOGS -->
+    <main class="container my-5">
+        <!-- Título central -->
+        <h2 class="text-center fw-bold mb-5 titulo-blogs">NOTICIAS IMPORTANTES</h2>
+
+        <div class="d-flex flex-column gap-5">
+
+            <!-- DATO CURIOSO #1 -->
+            <div class="card-blog-gris">
+                <div class="row align-items-center">
+                    <!-- Columna de Texto -->
+                    <div class="col-md-6 pe-lg-5">
+                        <h3 class="titulo-caso">DATO CURIOSO #1</h3>
+                        <p class="parrafo-caso mb-4">
+                            <strong>El origen en Quilpué:</strong> Market De La Esquina no nació en una gran oficina
+                            corporativa, sino de la necesidad de modernizar el clásico almacén de barrio. Comenzamos
+                            digitalizando nuestro stock local para que los vecinos pudieran asegurar su pan amasado
+                            justo antes de que saliera del horno.
+                        </p>
+                        <!-- Recuadro limpio, sin CSS en línea -->
+                        <div class="p-3 bg-white recuadro-wireframe">
+                            <span class="fw-bold texto-marca">💡 Nuestro secreto:</span>
+                            <span class="text-dark detalle-curioso">Tecnología moderna, pero con la misma receta casera
+                                del primer día.</span>
+                        </div>
+                    </div>
+                    <!-- Columna de Imagen -->
+                    <div class="col-md-6 columna-imagen">
+                        <img src="img/quilpue.jpg" class="img-fluid img-caso" alt="Paisaje de la ciudad">
+                    </div>
+                </div>
+            </div>
+
+            <!-- DATO CURIOSO #2 -->
+            <div class="card-blog-gris">
+                <div class="row align-items-center">
+                    <!-- Columna de Texto -->
+                    <div class="col-md-6 pe-lg-5">
+                        <h3 class="titulo-caso">DATO CURIOSO #2</h3>
+                        <p class="parrafo-caso mb-4">
+                            <strong>Del cuaderno a la nube:</strong> Durante años, los encargos de nuestros vecinos y el
+                            clásico "fiado" se anotaban a mano en un gastado cuaderno de espiral. Hoy, hemos dado el
+                            salto digital creando nuestra propia plataforma web para gestionar todo de forma más rápida,
+                            pero manteniendo intacta la confianza y el trato directo del barrio.
+                        </p>
+                        <!-- Recuadro limpio, sin CSS en línea -->
+                        <div class="p-3 bg-white recuadro-wireframe">
+                            <span class="fw-bold texto-marca">💻 Nuestro salto digital:</span>
+                            <span class="text-dark detalle-curioso">La misma atención cálida de toda la vida, ahora
+                                respaldada por tecnología moderna y segura.</span>
+                        </div>
+                    </div>
+                    <!-- Columna de Imagen -->
+                    <div class="col-md-6 columna-imagen">
+                        <!-- Tip: Aquí puedes usar la foto del interior del local que tienes en el banner del Home -->
+                        <img src="img/local.jpg" class="img-fluid img-caso" alt="Interior del minimarket">
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script Global del Badge -->
+    <script src="js/badge.js" defer></script>
+</body>
+
+</html>
